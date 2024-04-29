@@ -5,6 +5,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
@@ -24,30 +25,29 @@ class MainActivity : AppCompatActivity() {
         //set adapter
         //LinearLayout manager
         val rvList = findViewById<RecyclerView>(R.id.rv_list)
+        val adapter = ContactListAdapter()
 
+        rvList.adapter = adapter
+        rvList.layoutManager = LinearLayoutManager(this)
+        adapter.submitList(contacts)
 
     }
 }
 
-val contacts = listOf(
-    Contact("Alan", "1194327532874", R.drawable.gato),
-    Contact("Gatin", "1194327532874", R.drawable.gato),
-    Contact("Cachorro", "1194327532874", R.drawable.gato),
-    Contact("Macaco", "1194327532874", R.drawable.gato),
-    Contact("Alan", "1194327532874", R.drawable.gato),
-    Contact("Gatin", "1194327532874", R.drawable.gato),
-    Contact("Cachorro", "1194327532874", R.drawable.gato),
-    Contact("Macaco", "1194327532874", R.drawable.gato),
-    Contact("Alan", "1194327532874", R.drawable.gato),
-    Contact("Gatin", "1194327532874", R.drawable.gato),
-    Contact("Cachorro", "1194327532874", R.drawable.gato),
-    Contact("Macaco", "1194327532874", R.drawable.gato),
-    Contact("Alan", "1194327532874", R.drawable.gato),
-    Contact("Gatin", "1194327532874", R.drawable.gato),
-    Contact("Cachorro", "1194327532874", R.drawable.gato),
-    Contact("Macaco", "1194327532874", R.drawable.gato),
-    Contact("Alan", "1194327532874", R.drawable.gato),
-    Contact("Gatin", "1194327532874", R.drawable.gato),
-    Contact("Cachorro", "1194327532874", R.drawable.gato),
-    Contact("Macaco", "1194327532874", R.drawable.gato)
+private val contacts = listOf(
+    Contact("Ale", "(+55) 11 91234-5678", R.drawable.ale),
+    Contact("Bach", "(+55) 11 91234-5678", R.drawable.bach),
+    Contact("Caian Corporativo", "(+55) 11 91234-5678", R.drawable.caian1),
+    Contact("Caian Pessoal", "(+55) 11 91234-5678", R.drawable.caian2),
+    Contact("Ximbinha", "(+55) 11 91234-5678", R.drawable.chimbinha),
+    Contact("Sr Defumado", "(+55) 11 91234-5678", R.drawable.furtado),
+    Contact("Goku", "(+55) 11 91234-5678", R.drawable.goku),
+    Contact("Lalau Machiavelli", "(+55) 11 91234-5678", R.drawable.lalau),
+    Contact("Miguel Jefferson", "(+55) 11 91234-5678", R.drawable.miguel),
+    Contact("Muniz", "(+55) 11 91234-5678", R.drawable.muniz),
+    Contact("Mussum", "(+55) 11 91234-5678", R.drawable.mussum),
+    Contact("Pericles", "(+55) 11 91234-5678", R.drawable.pericles),
+    Contact("Urecubaba", "(+55) 11 91234-5678", R.drawable.rockbama),
+    Contact("Silvao", "(+55) 11 91234-5678", R.drawable.silvao),
+    Contact("Gatinho", "(+55) 11 91234-5678", R.drawable.gato)
 )
