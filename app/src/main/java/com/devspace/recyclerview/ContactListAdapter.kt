@@ -11,13 +11,10 @@ import androidx.recyclerview.widget.RecyclerView
 
 class ContactListAdapter :
     ListAdapter<Contact, ContactListAdapter.ContactViewHolder>(ContactDiffUtils()) {
-    //criar um view holder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list, parent, false)
     return ContactViewHolder(view)
     }
-
-    //atrelar/vincular o dado com as views
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
         val contact = getItem(position)
         holder.bind(contact)
