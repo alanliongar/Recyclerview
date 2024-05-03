@@ -1,6 +1,7 @@
 package com.devspace.recyclerview
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -38,6 +39,10 @@ class MainActivity : AppCompatActivity() {
 
         ivGrid.setOnClickListener{
             rvList.layoutManager = GridLayoutManager(this,2)
+        }
+
+        adapter.setOnClickListener { contact ->
+            //colocar a função aqui, pra enviar dados pra próxima tela (proximo passo)
         }
     }
 }
