@@ -1,5 +1,6 @@
 package com.devspace.recyclerview
 
+import android.os.Parcelable
 import androidx.annotation.DrawableRes
 
 data class Contact(
