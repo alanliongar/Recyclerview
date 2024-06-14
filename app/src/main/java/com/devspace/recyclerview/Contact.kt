@@ -8,7 +8,7 @@ data class Contact(
     val phone: String,
     @DrawableRes val icon: Int
 )
-
+//oiii
 val contacts = listOf(
     Contact("Ale", "(+55) 11 91234-5678", R.drawable.ale),
     Contact("Bach", "(+55) 11 91234-5678", R.drawable.bach),
