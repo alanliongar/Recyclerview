@@ -1,5 +1,5 @@
-## Sobre
-Esse aplicativo foi desenvolvido para praticar desenvolvimento de listas em desenvolvimento android com recyclerview.
+## About
+This application was developed to practice list development in Android using RecyclerView.
 
 ## Screenshots
 <p float="left">
